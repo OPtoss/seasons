@@ -20,6 +20,7 @@ namespace Seasons
 				tempObject = new GameObject("Camera"+(i+1));
 				cam = tempObject.AddComponent<Camera>();
 				cam.farClipPlane = 15f;
+				cam.orthographic = true;
 				_seasonCameras.Add(cam);
 				tempObject.transform.parent = transform;
 				tempObject.transform.position += Vector3.forward * (SeasonsGame.Z_DIST*i);
