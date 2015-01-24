@@ -65,6 +65,10 @@ namespace Seasons
 			GameObject tempObject;
 			for(int i = 0; i < _seasonObjects.Count; i++) 
 			{
+				if(_seasonObjects[i] == null) 
+				{
+					continue;
+				}
 				tempObject = GameObject.Instantiate(_seasonObjects[i],
 				                                    transform.position+Vector3.forward*(i*SeasonsGame.Z_DIST),
 				                                    Quaternion.identity) as GameObject;

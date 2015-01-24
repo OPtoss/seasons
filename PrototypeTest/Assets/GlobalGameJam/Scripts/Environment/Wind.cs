@@ -5,12 +5,12 @@ namespace Seasons
 {
 	public class Wind : MonoBehaviour 
 	{	
-		[SerializeField] private float _windForce = 3f; 
+		[SerializeField] private Vector2 _windForce; 
 		public void OnTriggerEnter(Collider col)
 		{
 			if(col.gameObject.layer == CollisionMaskUtils.S_PlayerLayer)
 			{
-				col.gameObject.GetComponent<PlayerObject>().SetWindForce(_windForce);
+				col.gameObject.GetComponent<PlayerObject>().SetVelocityModifer(_windForce);
 			}
 		}
 
@@ -18,7 +18,7 @@ namespace Seasons
 		{
 			if(col.gameObject.layer == CollisionMaskUtils.S_PlayerLayer)
 			{
-				col.gameObject.GetComponent<PlayerObject>().SetWindForce(0);
+				col.gameObject.GetComponent<PlayerObject>().SetVelocityModifer(Vector2.zero);
 			}
 		}
 	}

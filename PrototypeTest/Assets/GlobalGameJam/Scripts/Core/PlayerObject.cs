@@ -9,7 +9,7 @@ namespace Seasons
 		public float MovementSpeed = 10f;
 		public float MaxGroundSpeed = 2f;
 		public float MaxAirSpeed = 4f;
-		private float _windForce;
+		private Vector2 _velocityModifier;
 		private void OnEnable() 
 		{
 			//m_controller = GetComponent<CharacterController>();
@@ -24,18 +24,18 @@ namespace Seasons
 			{
 				rigidbody.AddForce(Vector3.right*MovementSpeed,ForceMode.Acceleration);
 			}
-			if(_windForce > 0)
+			if(_velocityModifier.magnitude > 0)
 			{
 				if(rigidbody.velocity.magnitude < MaxAirSpeed)
 				{
-					rigidbody.AddForce(Vector3.up * _windForce,ForceMode.Impulse);
+					rigidbody.AddForce(new Vector3(_velocityModifier.x,_velocityModifier.y,0),ForceMode.Impulse);
 				}
 			}
 		}
 
-		public void SetWindForce (float windForce)
+		public void SetVelocityModifer (Vector2 force)
 		{
-			_windForce = windForce;
+			_velocityModifier = force;
 		}
 
 		public void UpdatePlayerDepth(int depth) 
