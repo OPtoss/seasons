@@ -46,60 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NodeCanvas\Core\Editor\ExternalInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\GraphEditor.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\BlackboardInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\BlackboardMecanimBinderInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\BlackboardPropertyBinderInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\ConnectionInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\EventDebuggerInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\GraphInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\GraphOwnerInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\NodeInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\Inspectors\TaskInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\TaskWizardEditor.cs" />
-     <Compile Include="Assets\NodeCanvas\Core\Editor\TypeConfigurationEditor.cs" />
-     <Compile Include="Assets\NodeCanvas\Systems\BehaviourTree\Editor\BehaviourTreeOwnerInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Systems\DialogueTree\Editor\DialogueActorInspector.cs" />
-     <Compile Include="Assets\NodeCanvas\Systems\DialogueTree\Editor\DialogueTreeInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\BipedIK\Editor\BipedIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\BipedIK\Editor\BipedIKSolversInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\Constraints\Editor\ConstraintsInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\AimIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\CCDIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\FABRIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\FABRIKRootInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\FullBodyBipedIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\IKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\LimbIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\LookAtIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Components\Editor\TrigonometricIKInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKEffectorInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverAimInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverFABRIKRootInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverFullBodyBipedInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverFullBodyInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverHeuristicInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverLimbInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverLookAtInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\IK Solvers\Editor\IKSolverTrigonometricInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\InteractionSystem\Editor\InteractionTargetInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\InteractionSystem\Editor\InteractionTriggerInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\Rotation Limits\Editor\RotationLimitAngleInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\Rotation Limits\Editor\RotationLimitHingeInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\Rotation Limits\Editor\RotationLimitInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\Rotation Limits\Editor\RotationLimitPolygonalInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\Rotation Limits\Editor\RotationLimitSplineInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\_DEMOS\Limb IK\Scripts\Limb IK Bend Goal\Editor\BendGoalInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\_DEMOS\Shared\Scripts\Aim Poser\Editor\AimPoserInspector.cs" />
-     <Compile Include="Assets\RootMotion\FinalIK\_DEMOS\Shared\Scripts\Editor\IKExecutionOrderInspector.cs" />
-     <Compile Include="Assets\RootMotion\Scripts\Editor\BipedReferencesInspector.cs" />
-     <Compile Include="Assets\RootMotion\Scripts\Editor\Inspector.cs" />
-     <Compile Include="Assets\RootMotion\Scripts\Editor\SerializedContent.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Editor\SeasonalObjectEditor.cs" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
-     <None Include="Assets\NodeCanvas\!ReadMe!.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\MaterialPlatform.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
@@ -118,11 +67,11 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
+ <Reference Include="ShaderForge">
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/ShaderForge/Editor/ShaderForge.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="ShaderForge">
- <HintPath>C:/Users/Ben/Documents/PrototypeTest/Assets/ShaderForge/Editor/ShaderForge.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
