@@ -33,6 +33,13 @@ namespace Seasons
 			DG.Tweening.DOTween.Init();
 		}
 
+		private void Start()
+		{
+			_currentSeason = 2;
+			_cameraManager.ChangeCamera(_currentSeason);
+			_player.UpdatePlayerDepth(_currentSeason);
+		}
+
 		public void Restart()
 		{
 			_player.transform.position = _spawnPoint.position;
