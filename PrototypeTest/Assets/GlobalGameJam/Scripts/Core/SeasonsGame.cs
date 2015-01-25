@@ -59,6 +59,8 @@ namespace Seasons
 
 		private void Start()
 		{
+            _player.transform.position = _spawnPoint.position;
+
             _currentSeason = _startSeason;
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);

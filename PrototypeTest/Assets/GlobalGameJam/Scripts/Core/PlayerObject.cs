@@ -67,6 +67,8 @@ namespace Seasons
 		{
             var animator = this.GetComponentInChildren<Animator>();
 
+            Vector3 groundUp = GetGroundNormal();
+
 			//If a volume is yielding an event, have the character stand idle.
 			if(SeasonsGame.instance.IsWaitingForUser)
 			{
@@ -86,7 +88,6 @@ namespace Seasons
 			if(rigidbody.velocity.magnitude < MaxGroundSpeed)
 			{
                 Vector3 playerForward = Vector3.right;
-                Vector3 groundUp = GetGroundNormal();
                 Vector3 cross = Vector3.Cross(groundUp, Vector3.up);
                 float sign = cross.z < 0 ? -1 : 1;
                 Quaternion rotateToNormal = Quaternion.AngleAxis(Vector3.Angle(groundUp, Vector3.up) * sign, Vector3.back);
