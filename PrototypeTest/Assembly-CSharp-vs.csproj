@@ -55,6 +55,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\DialogueVolume.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\DisableSeasonalObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\EmitterObject.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\GameOverTrigger.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\FollowX.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Obstacles\SnowmanObstacle.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\UI\FadeController.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\SeasonsButton.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\TextUIController.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />

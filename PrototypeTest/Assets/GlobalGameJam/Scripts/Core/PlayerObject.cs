@@ -6,14 +6,19 @@ namespace Seasons
 	public class PlayerObject : MonoBehaviour 
 	{
 		//private CharacterController m_controller;
+		[SerializeField] private ParticleSystem _sparks;
+		[SerializeField] private ParticleSystem _smoke;
+
 		public float MovementSpeed = 10f;
 		public float MaxGroundSpeed = 2f;
 		public float MaxAirSpeed = 4f;
+
 		private Vector2 _velocityModifier;
 		private MessageAnimationController _controllerReference;
         private bool isHittingGround = false;
         public Transform model;
         private Quaternion toRotation = Quaternion.identity;
+
 		private void Start() 
 		{
 			//m_controller = GetComponent<CharacterController>();
@@ -34,6 +39,23 @@ namespace Seasons
             isHittingGround = false;
             return Vector3.up;
         }
+
+		public void ActivateSparks()
+		{
+			_sparks.Simulate(0f);
+		}
+
+		public void ActivateSmoke()
+		{
+			_smoke.Simulate(0f);
+		}
+
+		public void StopEffects()
+		{
+			_smoke.Stop();
+			_sparks.Stop();
+		}
+
 
 		//Play 'lil animation.
 		public void MessageReceived()
