@@ -13,16 +13,36 @@ namespace Seasons
 		private void Start() 
 		{
 			//m_controller = GetComponent<CharacterController>();
-			gameObject.layer = CollisionMaskUtils.S_PlayerLayer;
-
+			gameObject.layer = CollisionMaskUtils.PlayerLayer;
+			Debug.Log(gameObject.layer);
 		}
 
-		public void Update() 
+        public Vector3 GetGroundNormal()
+        {
+            RaycastHit hit;
+            LayerMask groundMask = 1 << CollisionMaskUtils.GroundLayer;
+            if (Physics.Raycast(this.transform.position, Vector3.down + Vector3.right*0.5f, out hit, 100, groundMask))
+            {
+                Debug.Log("Hit yo " + hit.normal);
+                return hit.normal;
+            }
+            return Vector3.up;
+        }
+
+		public void FixedUpdate() 
 		{
 			//m_controller.SimpleMove(((Vector3.right*MovementSpeed)+(Vector3.up*_windForce))*Time.
 			if(rigidbody.velocity.magnitude < MaxGroundSpeed)
 			{
-				rigidbody.AddForce(Vector3.right*MovementSpeed,ForceMode.Acceleration);
+                Vector3 playerForward = Vector3.right;
+                Vector3 groundUp = GetGroundNormal();
+                Vector3 cross = Vector3.Cross(groundUp, Vector3.up);
+                float sign = cross.z < 0 ? -1 : 1;
+                playerForward = Quaternion.AngleAxis(Vector3.Angle(groundUp, Vector3.up) * sign, Vector3.back) * playerForward;
+
+                Debug.DrawLine(this.transform.position, this.transform.position + playerForward * 2f, Color.green);
+
+                rigidbody.AddForce(playerForward * MovementSpeed, ForceMode.Impulse);
 			}
 			if(_velocityModifier.magnitude > 0)
 			{

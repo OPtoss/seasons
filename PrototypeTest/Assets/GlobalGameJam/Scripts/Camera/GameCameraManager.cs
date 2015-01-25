@@ -33,7 +33,7 @@ namespace Seasons
                 cam.enabled = false;
 				_seasonCameras.Add(cam);
 				tempObject.transform.parent = transform;
-				tempObject.transform.position += Vector3.forward * (SeasonsGame.Z_DIST*i);
+                tempObject.transform.position += Vector3.forward * (SeasonsGame.Z_DIST * i - SeasonsGame.Z_DIST/2f);
 			}
 
             //_fadingRT = RenderTexture.GetTemporary(Screen.width, Screen.height);

@@ -6,7 +6,7 @@ namespace Seasons
 {
 	public class SeasonsGame : MonoBehaviour 
 	{
-		public static float Z_DIST = 10.0f;
+		public static float Z_DIST = 50f;
 		public static SeasonsGame _instance;
 
 		[SerializeField] private Transform _spawnPoint;
@@ -14,6 +14,14 @@ namespace Seasons
 		private PlayerObject _player;
 		private GameCameraManager _cameraManager;
 		private int _currentSeason = 0;
+
+		public PlayerObject PlayerInstance
+		{
+			get
+			{
+				return _player;
+			}
+		}
 
 		private void Awake() 
 		{

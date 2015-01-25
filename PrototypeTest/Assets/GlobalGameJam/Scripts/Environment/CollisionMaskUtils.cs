@@ -2,10 +2,29 @@
 using System.Collections;
 
 public class CollisionMaskUtils : MonoBehaviour {
-	public static int S_PlayerLayer;
-	// Use this for initialization
-	private void Awake () 
+	private static int s_playerLayer = -1; 
+	public static int PlayerLayer
 	{
-		S_PlayerLayer = LayerMask.NameToLayer("Player");
+		get
+		{
+			if(s_playerLayer == -1)
+			{
+				s_playerLayer = LayerMask.NameToLayer("Player");				
+			}
+			return s_playerLayer;
+		}
 	}
+
+    private static int s_groundLayer = -1;
+    public static int GroundLayer
+    {
+        get
+        {
+            if (s_groundLayer == -1)
+            {
+                s_groundLayer = LayerMask.NameToLayer("Ground");
+            }
+            return s_groundLayer;
+        }
+    }
 }

@@ -52,7 +52,10 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\PlayerObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\SeasonsGame.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\CollisionMaskUtils.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\EmitterObject.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\Wind.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Obstacles\SnowmanObstacle.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" />
@@ -69,6 +72,7 @@
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Cubemaps.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Parallax.shader" />
+     <None Include="Assets\GlobalGameJam\PanningTexture.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />

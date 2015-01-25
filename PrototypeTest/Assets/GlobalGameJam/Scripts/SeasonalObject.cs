@@ -5,8 +5,8 @@ namespace Seasons
 	[SelectionBase]
 	public class SeasonalObject : MonoBehaviour 
 	{
-		[SerializeField] private List<GameObject> _seasonObjects;
-		private List<GameObject> _objectReferences;
+		[SerializeField] private List<LevelObject> _seasonObjects;
+		private List<LevelObject> _objectReferences;
 
 		private void OnEnable() 
 		{
@@ -16,11 +16,11 @@ namespace Seasons
 		{
 			if(_seasonObjects == null) 
 			{
-				_seasonObjects = new List<GameObject>();
+				_seasonObjects = new List<LevelObject>();
 			}
 			if(_objectReferences == null) 
 			{
-				_objectReferences = new List<GameObject>();	
+				_objectReferences = new List<LevelObject>();	
 			}
 		}
 
@@ -29,7 +29,7 @@ namespace Seasons
 			_objectReferences.Clear();
 			for(int i = 0; i < transform.childCount; i++) 
 			{
-				_objectReferences.Add(transform.GetChild(i).gameObject);
+				_objectReferences.Add(transform.GetChild(i).gameObject.GetComponent<LevelObject>());
 			}
 		}
 
@@ -62,16 +62,16 @@ namespace Seasons
 				_objectReferences.RemoveAt(0);
 			}
 			
-			GameObject tempObject;
+			LevelObject tempObject;
 			for(int i = 0; i < _seasonObjects.Count; i++) 
 			{
 				if(_seasonObjects[i] == null) 
 				{
 					continue;
 				}
-				tempObject = GameObject.Instantiate(_seasonObjects[i],
+				tempObject = LevelObject.Instantiate(_seasonObjects[i],
 				                                    transform.position+Vector3.forward*(i*SeasonsGame.Z_DIST),
-				                                    Quaternion.identity) as GameObject;
+				                                    Quaternion.identity) as LevelObject;
 				tempObject.transform.parent = transform;
 				_objectReferences.Add(tempObject);
 			} 

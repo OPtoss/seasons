@@ -19,6 +19,7 @@ ModelImporter:
     100026: persp1
     100028: persp2
     100030: pSphere1
+    100032: loftedSurface2
     400000: pCone1
     400002: pCylinder1
     400004: pSphere2
@@ -35,6 +36,7 @@ ModelImporter:
     400026: persp1
     400028: persp2
     400030: pSphere1
+    400032: loftedSurface2
     2300000: pCone1
     2300002: pCylinder1
     2300004: pSphere2
@@ -43,6 +45,7 @@ ModelImporter:
     2300010: pSphere5
     2300012: //RootNode
     2300014: pSphere1
+    2300016: loftedSurface2
     3300000: pCone1
     3300002: pCylinder1
     3300004: pSphere2
@@ -51,6 +54,7 @@ ModelImporter:
     3300010: pSphere5
     3300012: //RootNode
     3300014: pSphere1
+    3300016: loftedSurface2
     4300000: pSphere1
     4300002: pSphere2
     4300004: pSphere3
@@ -58,6 +62,7 @@ ModelImporter:
     4300008: pSphere5
     4300010: pCone1
     4300012: pCylinder1
+    4300014: loftedSurface2
     7400000: Take 001
     9500000: //RootNode
   materials:
