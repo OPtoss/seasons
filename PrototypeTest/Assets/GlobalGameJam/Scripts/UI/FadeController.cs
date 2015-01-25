@@ -19,6 +19,15 @@ namespace Seasons
 			tween.OnComplete(()=>HangWhite(onComplete));
 		}
 
+		public void FadeFromWhite ()
+		{
+			_blackImage.color = new Color(1,1,1,1);
+			Tweener tween = DOTween.To(()=>_blackImage.color,
+			                           x=>_blackImage.color = x,
+			                           new Color(1,1,1,0),
+			                           1.5f);
+		}
+
 		private void HangWhite(System.Action action)
 		{
 			float f = 0.0f;
