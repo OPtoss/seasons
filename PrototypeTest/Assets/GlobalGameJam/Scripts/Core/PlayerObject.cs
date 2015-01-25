@@ -45,6 +45,16 @@ namespace Seasons
 			_sparks.Simulate(0f);
 		}
 
+		public void Kill ()
+		{
+			this.GetComponentInChildren<Animator>().SetTrigger("EndGame");
+		}
+
+		public void Revive()
+		{
+			this.GetComponentInChildren<Animator>().SetTrigger("GameReset");
+		}
+
 		public void ActivateSmoke()
 		{
 			_smoke.Simulate(0f);

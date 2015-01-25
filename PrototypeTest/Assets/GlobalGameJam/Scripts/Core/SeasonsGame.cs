@@ -12,6 +12,8 @@ namespace Seasons
 		public static SeasonsGame instance;
 		
 		[SerializeField] private Transform _spawnPoint;
+		private int _seasonCheckpoint;
+		private Transform _baseSpawn;
 		
 		private PlayerObject _player;
 		private GameCameraManager _cameraManager;
@@ -66,7 +68,14 @@ namespace Seasons
 			_currentSeason = _startSeason;
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
-			
+			_baseSpawn = _spawnPoint;
+			_seasonCheckpoint = _currentSeason;			
+		}
+
+		public void SetCheckpoint (Transform _target)
+		{
+			_spawnPoint = _target;
+			_seasonCheckpoint = _currentSeason;
 		}
 		
 		public void BlockInput(bool isBlocking)
@@ -79,10 +88,10 @@ namespace Seasons
 			if (OnRestart != null)
 				OnRestart();
 			_blockInput = false;
+			_currentSeason = _seasonCheckpoint;
 			_player.transform.position = _spawnPoint.position;
 			_targetYieldSeason = -1;
 			_gameComplete = false;
-			_currentSeason = _startSeason;
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
 		}
@@ -127,6 +136,7 @@ namespace Seasons
 		public void FreezePlayer()
 		{
 			_targetYieldSeason = -2;
+			PlayerInstance.Kill(); 
 		}
 		
 		public void YieldSeason(int targetSeason)
@@ -140,7 +150,8 @@ namespace Seasons
 			{
 				_fadeController.FadeUIIn(action);
 			}
-			
+			_spawnPoint = _baseSpawn;
+			_currentSeason = _startSeason;
 			_gameComplete = true;
 		}
 		
@@ -164,6 +175,7 @@ namespace Seasons
 						if(_fadeController.CanRestart())
 						{
 							Restart();
+							_player.Revive();
 							_fadeController.FadeUIOut();
 						}
 					}

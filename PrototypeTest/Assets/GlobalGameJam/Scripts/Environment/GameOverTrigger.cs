@@ -10,6 +10,7 @@ namespace Seasons
 		private float _initialSize;
 		protected override void EnteredObject (GameObject targetObject)
 		{
+
 			base.EnteredObject (targetObject);
 			_initialEmissionRate = _snow.emissionRate;
 			_initialSize = _snow.startSize;
