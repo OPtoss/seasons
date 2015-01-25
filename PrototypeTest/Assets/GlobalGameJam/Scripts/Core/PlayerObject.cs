@@ -29,6 +29,11 @@ namespace Seasons
 
 		public void FixedUpdate() 
 		{
+			//If a volume is yielding an event, have the character stand idle.
+			if(SeasonsGame.instance.IsWaitingForUser)
+			{
+				return;
+			}
 			//m_controller.SimpleMove(((Vector3.right*MovementSpeed)+(Vector3.up*_windForce))*Time.
 			if(rigidbody.velocity.magnitude < MaxGroundSpeed)
 			{
@@ -38,7 +43,7 @@ namespace Seasons
                 float sign = cross.z < 0 ? -1 : 1;
                 playerForward = Quaternion.AngleAxis(Vector3.Angle(groundUp, Vector3.up) * sign, Vector3.back) * playerForward;
 
-                Debug.DrawLine(this.transform.position, this.transform.position + playerForward * 2f, Color.green);
+                //Debug.DrawLine(this.transform.position, this.transform.position + playerForward * 2f, Color.green);
 
                 rigidbody.AddForce(playerForward * MovementSpeed, ForceMode.Impulse);
 			}
