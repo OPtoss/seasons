@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GlobalGameJam\Scripts\Editor\SeasonalObjectEditor.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\VertexColoredEmissive.shader" />
      <None Include="Assets\GlobalGameJam\Shader\AlphaFlat.shader" />
      <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />

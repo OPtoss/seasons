@@ -14,6 +14,7 @@ namespace Seasons
 			                             collider.bounds.center + (Vector3.right * _textDistance),
 			                             transform.rotation) as GameObject;
 			obj.GetComponent<TextUIController>().RenderText(_text, _textColor);
+			SeasonsGame.instance.PlayerInstance.MessageReceived();
 		}
 	}
 }

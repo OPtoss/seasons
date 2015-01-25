@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GlobalGameJam\Scripts\Animation\MessageAnimationController.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Camera\CameraFader.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Camera\GameCameraManager.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\PlayerObject.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\TextUIController.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\VertexColoredEmissive.shader" />
      <None Include="Assets\GlobalGameJam\Shader\AlphaFlat.shader" />
      <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />

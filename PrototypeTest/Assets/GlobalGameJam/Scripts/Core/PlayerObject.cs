@@ -10,10 +10,12 @@ namespace Seasons
 		public float MaxGroundSpeed = 2f;
 		public float MaxAirSpeed = 4f;
 		private Vector2 _velocityModifier;
+		private MessageAnimationController _controllerReference;
 		private void Start() 
 		{
 			//m_controller = GetComponent<CharacterController>();
 			gameObject.layer = CollisionMaskUtils.PlayerLayer;
+			_controllerReference = transform.GetComponentInChildren<MessageAnimationController>();
 		}
 
         public Vector3 GetGroundNormal()
@@ -26,6 +28,12 @@ namespace Seasons
             }
             return Vector3.up;
         }
+
+		//Play 'lil animation.
+		public void MessageReceived()
+		{
+			_controllerReference.MessageReceived();
+		}
 
 		public void FixedUpdate() 
 		{
