@@ -1,27 +1,28 @@
 fileFormatVersion: 2
-guid: 949cba84cd86bc647b7ae496f56b2c97
+guid: 685cfab395275074eac6b1c52a86c722
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: curve1
+    100000: curve1
+    100002: curve2
     100004: curve3
-    100006: loftedSurface1
-    400000: //RootNode
-    400002: curve1
+    100006: //RootNode
+    100008: loftedSurface1
+    100010: persp1
+    100012: top1
+    400000: curve1
+    400002: curve2
     400004: curve3
-    400006: loftedSurface1
-    2300000: //RootNode
-    2300002: loftedSurface1
-    3300000: //RootNode
-    3300002: loftedSurface1
-    4300000: loftedSurface2
-    4300002: loftedSurface1
-    6400000: //RootNode
-    6400002: loftedSurface1
+    400006: //RootNode
+    400008: loftedSurface1
+    400010: persp1
+    400012: top1
+    2300000: loftedSurface1
+    3300000: loftedSurface1
+    4300000: loftedSurface1
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -36,17 +37,17 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
-    importBlendShapes: 0
+    addColliders: 0
+    importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 0
+    optimizeMeshForGPU: 1
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
@@ -55,9 +56,9 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
@@ -71,6 +72,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 

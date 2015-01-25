@@ -17,8 +17,7 @@ namespace Seasons
         public int _prevCameraIndex = 0;
         public int _cameraIndex = 0;
 
-        [SerializeField]
-        private RenderTexture _intermediateRT;
+        //[SerializeField] private RenderTexture _intermediateRT;
 
 
 		private void OnEnable()
@@ -37,7 +36,7 @@ namespace Seasons
 			}
 
             //_fadingRT = RenderTexture.GetTemporary(Screen.width, Screen.height);
-            _intermediateRT = RenderTexture.GetTemporary(Screen.width, Screen.height, 16, RenderTextureFormat.Default);
+            //_intermediateRT = RenderTexture.GetTemporary(Screen.width, Screen.height, 16, RenderTextureFormat.Default);
 
 			ChangeCamera(0); //Default to the 0th Camera.
 		}
@@ -51,7 +50,6 @@ namespace Seasons
             var next = _seasonCameras [newIndex];
 
             var fader = next.GetComponent<CameraFader>();
-            _fadeMaterial.SetFloat("_Alpha", 0);
             fader.FadeIn(fadeTime);
 
             _prevCameraIndex = _cameraIndex;
@@ -61,6 +59,7 @@ namespace Seasons
 
         private void OnPreCull()
         {
+            
             Camera prev = null;
             if (_prevCameraIndex >= 0)
                 prev = _seasonCameras[_prevCameraIndex];
@@ -75,7 +74,6 @@ namespace Seasons
             }
             else
             {
-                //next.targetTexture = null;
                 next.Render();
             }
         }
@@ -86,7 +84,7 @@ namespace Seasons
             
             var nextFader = next.GetComponent<CameraFader>();
 
-            if (nextFader.isFading && _prevCameraIndex >= 0)
+            if (nextFader.FadePercent < 1 && _prevCameraIndex >= 0)
             {
                 var prev = _seasonCameras[_prevCameraIndex];
                 var prevFader = prev.GetComponent<CameraFader>();
@@ -95,8 +93,6 @@ namespace Seasons
 
                 _fadeMaterial.SetFloat("_Alpha", nextFader.FadePercent);
                 Graphics.Blit(nextFader.renderTexture, destination, _fadeMaterial);
-
-                //Graphics.Blit(_intermediateRT, destination);
             }
             else
             {
@@ -108,9 +104,9 @@ namespace Seasons
 		// Update is called once per frame
 		private void Update () 
 		{
-            
-			Vector3 targetPos = new Vector3(_target.position.x, _target.position.y, 0);
-			transform.localPosition = targetPos + (Vector3.forward*_followDistance);
+
+            Vector3 targetPos = new Vector3(_target.position.x, _target.position.y, 0);
+			transform.localPosition = targetPos + (Vector3.right*_followDistance);
 		}
 	}
 }
