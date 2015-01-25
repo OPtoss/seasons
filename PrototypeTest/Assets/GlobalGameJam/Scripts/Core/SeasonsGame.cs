@@ -15,6 +15,8 @@ namespace Seasons
 		private GameCameraManager _cameraManager;
 		private int _currentSeason = 0;
 
+        private bool _isTapDown = false;
+
 		public PlayerObject PlayerInstance
 		{
 			get
@@ -48,5 +50,22 @@ namespace Seasons
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
 		}
+
+        public void Update()
+        {
+            if (Input.GetAxis("Tap") > 0)
+            {
+                if (!_isTapDown)
+                {
+                    _isTapDown = true;
+
+                    ChangeSeasons();
+                }
+            }
+            else
+            {
+                _isTapDown = false;
+            }
+        }
 	}
 }

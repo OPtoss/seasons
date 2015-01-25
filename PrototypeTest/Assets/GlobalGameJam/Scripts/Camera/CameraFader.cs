@@ -15,7 +15,7 @@ namespace Seasons
 
         private void Start()
         {
-            renderTexture = RenderTexture.GetTemporary(Screen.width, Screen.height);
+            renderTexture = RenderTexture.GetTemporary(Screen.width, Screen.height, 16, RenderTextureFormat.Default);
 
             GetComponent<Camera>().targetTexture = renderTexture;
         }

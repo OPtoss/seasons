@@ -37,7 +37,7 @@ namespace Seasons
 			}
 
             //_fadingRT = RenderTexture.GetTemporary(Screen.width, Screen.height);
-            _intermediateRT = RenderTexture.GetTemporary(Screen.width, Screen.height);
+            _intermediateRT = RenderTexture.GetTemporary(Screen.width, Screen.height, 16, RenderTextureFormat.Default);
 
 			ChangeCamera(0); //Default to the 0th Camera.
 		}
@@ -51,6 +51,7 @@ namespace Seasons
             var next = _seasonCameras [newIndex];
 
             var fader = next.GetComponent<CameraFader>();
+            _fadeMaterial.SetFloat("_Alpha", 0);
             fader.FadeIn(fadeTime);
 
             _prevCameraIndex = _cameraIndex;

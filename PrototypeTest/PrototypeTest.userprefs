@@ -1,5 +1,6 @@
 ﻿<Properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlobalGameJam\Scripts\Camera\CameraFader.cs">
     <Files>
@@ -11,8 +12,12 @@
 =======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlobalGameJam\Scripts\Environment\EmitterObject.cs">
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GlobalGameJam\Scripts\SeasonalObject.cs">
+>>>>>>> 8b2f7c4136afdc97bfb43081fdb1515d79aa11e6
     <Files>
-      <File FileName="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" Line="80" Column="3" />
+      <File FileName="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" Line="13" Column="4" />
       <File FileName="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" Line="1" Column="1" />
       <File FileName="Assets\GlobalGameJam\Scripts\Environment\CollisionMaskUtils.cs" Line="1" Column="1" />
       <File FileName="Assets\GlobalGameJam\Scripts\Core\SeasonsGame.cs" Line="1" Column="1" />
@@ -20,8 +25,8 @@
       <File FileName="Assets\GlobalGameJam\Scripts\UI\SeasonsButton.cs" Line="1" Column="1" />
       <File FileName="Assets\GlobalGameJam\Scripts\Camera\GameCameraManager.cs" Line="1" Column="1" />
       <File FileName="Assets\GlobalGameJam\Scripts\Environment\Wind.cs" Line="1" Column="1" />
-      <File FileName="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" Line="5" Column="2" />
-      <File FileName="Assets\GlobalGameJam\Scripts\Environment\KillObject.cs" Line="19" Column="19" />
+      <File FileName="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\GlobalGameJam\Scripts\Environment\KillObject.cs" Line="1" Column="1" />
       <File FileName="Assets\GlobalGameJam\Scripts\Environment\EmitterObject.cs" Line="16" Column="1" />
 >>>>>>> 14cc9c7b51124fa61c9cba54e820a28297a091e2
     </Files>
@@ -31,9 +36,7 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="GlobalGameJam" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Environment" expanded="True">
-                  <Node name="EmitterObject.cs" selected="True" />
-                </Node>
+                <Node name="SeasonalObject.cs" selected="True" />
               </Node>
             </Node>
           </Node>

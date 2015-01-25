@@ -62,6 +62,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\SeasonsButton.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\AlphaFlat.shader" />
      <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />

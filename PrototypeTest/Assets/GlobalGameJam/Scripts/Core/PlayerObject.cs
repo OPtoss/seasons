@@ -23,7 +23,6 @@ namespace Seasons
             LayerMask groundMask = 1 << CollisionMaskUtils.GroundLayer;
             if (Physics.Raycast(this.transform.position, Vector3.down + Vector3.right*0.5f, out hit, 100, groundMask))
             {
-                Debug.Log("Hit yo " + hit.normal);
                 return hit.normal;
             }
             return Vector3.up;
