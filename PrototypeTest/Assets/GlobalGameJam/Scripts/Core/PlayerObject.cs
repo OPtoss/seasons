@@ -14,7 +14,6 @@ namespace Seasons
 		{
 			//m_controller = GetComponent<CharacterController>();
 			gameObject.layer = CollisionMaskUtils.PlayerLayer;
-			Debug.Log(gameObject.layer);
 		}
 
         public Vector3 GetGroundNormal()

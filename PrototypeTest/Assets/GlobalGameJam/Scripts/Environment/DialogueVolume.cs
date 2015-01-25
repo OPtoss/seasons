@@ -6,7 +6,7 @@ namespace Seasons
 	{
 		[SerializeField] private string _text; 
 		[SerializeField] private Color _textColor;
-		[SerializeField] private float _textDistance = 15f;
+		[SerializeField] private float _textDistance = 4f;
 		protected override void EnteredObject (GameObject targetObject)
 		{
 			base.EnteredObject (targetObject);
