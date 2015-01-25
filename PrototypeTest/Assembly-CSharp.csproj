@@ -39,27 +39,32 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GlobalGameJam\Scripts\Camera\CameraFader.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Camera\GameCameraManager.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Core\NewBehaviourScript.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\PlayerObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\SeasonsGame.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\CollisionMaskUtils.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\Wind.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Obstacles\SnowmanObstacle.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\SeasonsButton.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\MaterialPlatform.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
+     <None Include="Assets\GlobalGameJam\Shader\AlphaPostEffect.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Cubemaps.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
@@ -71,7 +76,7 @@
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

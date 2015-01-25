@@ -37,7 +37,7 @@ namespace Seasons
 			{
 				_currentSeason++;
 			}
-			_cameraManager.UpdateCamera(_currentSeason);
+			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
 		}
 	}

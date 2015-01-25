@@ -10,7 +10,7 @@ namespace Seasons
 		public float MaxGroundSpeed = 2f;
 		public float MaxAirSpeed = 4f;
 		private Vector2 _velocityModifier;
-		private void OnEnable() 
+		private void Start() 
 		{
 			//m_controller = GetComponent<CharacterController>();
 			gameObject.layer = CollisionMaskUtils.S_PlayerLayer;

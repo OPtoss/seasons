@@ -39,18 +39,20 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GlobalGameJam\Scripts\Editor\SeasonalObjectEditor.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\MaterialPlatform.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
+     <None Include="Assets\GlobalGameJam\Shader\AlphaPostEffect.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Cubemaps.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
@@ -62,16 +64,16 @@
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="ShaderForge">
- <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/ShaderForge/Editor/ShaderForge.dll</HintPath>
+ <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/ShaderForge/Editor/ShaderForge.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
