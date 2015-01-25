@@ -59,9 +59,11 @@ namespace Seasons
 
 		private void Start()
 		{
+			_fadeController.FadeFromWhite();
             _currentSeason = _startSeason;
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
+
 		}
 
 		public void Restart()
