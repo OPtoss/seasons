@@ -10,25 +10,56 @@ namespace Seasons
 		public float MaxGroundSpeed = 2f;
 		public float MaxAirSpeed = 4f;
 		private Vector2 _velocityModifier;
+		private MessageAnimationController _controllerReference;
+        private bool isHittingGround = false;
+        public Transform model;
+        private Quaternion toRotation = Quaternion.identity;
 		private void Start() 
 		{
 			//m_controller = GetComponent<CharacterController>();
 			gameObject.layer = CollisionMaskUtils.PlayerLayer;
+			_controllerReference = transform.GetComponentInChildren<MessageAnimationController>();
 		}
 
         public Vector3 GetGroundNormal()
         {
             RaycastHit hit;
             LayerMask groundMask = 1 << CollisionMaskUtils.GroundLayer;
-            if (Physics.Raycast(this.transform.position, Vector3.down + Vector3.right*0.5f, out hit, 100, groundMask))
+            Debug.DrawLine(this.transform.position, this.transform.position + (Vector3.down + Vector3.right * 0.5f) * 1.2f);
+            if (Physics.Raycast(this.transform.position, Vector3.down + Vector3.right*0.5f, out hit, 1.2f, groundMask))
             {
+                isHittingGround = true;
                 return hit.normal;
             }
+            isHittingGround = false;
             return Vector3.up;
         }
 
+		//Play 'lil animation.
+		public void MessageReceived()
+		{
+			_controllerReference.MessageReceived();
+		}
+
 		public void FixedUpdate() 
 		{
+            var animator = this.GetComponentInChildren<Animator>();
+
+			//If a volume is yielding an event, have the character stand idle.
+			if(SeasonsGame.instance.IsWaitingForUser)
+			{
+                if (rigidbody.velocity != Vector3.zero)
+                {
+                    animator.SetTrigger("LookBack");
+                    rigidbody.velocity = Vector3.zero;
+                }
+				return;
+			}
+            else
+            {
+                if (isHittingGround)
+                    animator.SetTrigger("ToIdle");
+            }
 			//m_controller.SimpleMove(((Vector3.right*MovementSpeed)+(Vector3.up*_windForce))*Time.
 			if(rigidbody.velocity.magnitude < MaxGroundSpeed)
 			{
@@ -36,9 +67,13 @@ namespace Seasons
                 Vector3 groundUp = GetGroundNormal();
                 Vector3 cross = Vector3.Cross(groundUp, Vector3.up);
                 float sign = cross.z < 0 ? -1 : 1;
-                playerForward = Quaternion.AngleAxis(Vector3.Angle(groundUp, Vector3.up) * sign, Vector3.back) * playerForward;
+                Quaternion rotateToNormal = Quaternion.AngleAxis(Vector3.Angle(groundUp, Vector3.up) * sign, Vector3.back);
+                playerForward = rotateToNormal * playerForward;
 
-                Debug.DrawLine(this.transform.position, this.transform.position + playerForward * 2f, Color.green);
+                toRotation = Quaternion.Lerp(Quaternion.identity, rotateToNormal, 0.7f);
+                
+
+                //Debug.DrawLine(this.transform.position, this.transform.position + playerForward * 2f, Color.green);
 
                 rigidbody.AddForce(playerForward * MovementSpeed, ForceMode.Impulse);
 			}
@@ -49,6 +84,8 @@ namespace Seasons
 					rigidbody.AddForce(new Vector3(_velocityModifier.x,_velocityModifier.y,0),ForceMode.Impulse);
 				}
 			}
+
+            model.transform.rotation = Quaternion.Lerp(model.transform.rotation, toRotation, 1f * Time.deltaTime);
 		}
 
 		public void SetVelocityModifer (Vector2 force)

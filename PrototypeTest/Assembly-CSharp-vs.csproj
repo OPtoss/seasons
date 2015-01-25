@@ -46,17 +46,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GlobalGameJam\Scripts\Animation\MessageAnimationController.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Camera\CameraFader.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Camera\GameCameraManager.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\PlayerObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\SeasonsGame.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\CollisionMaskUtils.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\DialogueVolume.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\DisableSeasonalObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\EmitterObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\Wind.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\YieldVolume.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\FollowX.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Obstacles\SnowmanObstacle.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" />
@@ -64,10 +67,12 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\TextUIController.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\VertexColoredEmissive.shader" />
      <None Include="Assets\GlobalGameJam\Shader\AlphaFlat.shader" />
      <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
+     <None Include="Assets\GlobalGameJam\Shader\SparkShader.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\MaterialPlatform.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\GlobalGameJam\Shader\AlphaPostEffect.shader" />
@@ -80,6 +85,7 @@
      <None Include="Assets\DOTween\readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
      <None Include="Assets\DOTween\DOTween46.xml" />
+     <None Include="Assets\GlobalGameJam\Shader\EdgeFadeWind.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
      <None Include="Assets\DOTween\DOTween43.xml" />

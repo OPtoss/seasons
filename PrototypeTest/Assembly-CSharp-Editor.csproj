@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GlobalGameJam\Scripts\Editor\SeasonalObjectEditor.cs" />
+     <None Include="Assets\GlobalGameJam\Shader\VertexColoredEmissive.shader" />
      <None Include="Assets\GlobalGameJam\Shader\AlphaFlat.shader" />
      <None Include="Assets\GlobalGameJam\Shader\FlatColor.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightCone.shader" />
      <None Include="Assets\ShaderForge\Readme.txt" />
+     <None Include="Assets\GlobalGameJam\Shader\SparkShader.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\MaterialPlatform.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
      <None Include="Assets\GlobalGameJam\Shader\AlphaPostEffect.shader" />
@@ -63,6 +65,7 @@
      <None Include="Assets\DOTween\readme.txt" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
      <None Include="Assets\DOTween\DOTween46.xml" />
+     <None Include="Assets\GlobalGameJam\Shader\EdgeFadeWind.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
      <None Include="Assets\DOTween\DOTween43.xml" />

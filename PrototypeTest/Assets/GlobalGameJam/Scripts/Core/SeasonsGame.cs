@@ -6,6 +6,8 @@ namespace Seasons
 {
 	public class SeasonsGame : MonoBehaviour 
 	{
+        public static event Action OnRestart;
+
 		public static float Z_DIST = 50f;
 		public static SeasonsGame instance;
 
@@ -18,12 +20,28 @@ namespace Seasons
 		private int _currentSeason = 0;
 
         private bool _isTapDown = false;
+		private int _targetYieldSeason = -1;
 
 		public PlayerObject PlayerInstance
 		{
 			get
 			{
 				return _player;
+			}
+		}
+
+		public int CurrentSeason {
+			get
+			{
+				return _currentSeason;
+			}
+		}
+
+		public bool IsWaitingForUser
+		{
+			get
+			{
+				return _targetYieldSeason != -1;
 			}
 		}
 
@@ -44,6 +62,9 @@ namespace Seasons
 
 		public void Restart()
 		{
+            if (OnRestart != null)
+                OnRestart();
+
 			_player.transform.position = _spawnPoint.position;
 
             _currentSeason = _startSeason;
@@ -61,8 +82,19 @@ namespace Seasons
 			{
 				_currentSeason++;
 			}
+
+			//Release yield.
+			if(_currentSeason == _targetYieldSeason)
+			{
+				_targetYieldSeason = -1;	
+			}
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
+		}
+
+		public void YieldSeason(int targetSeason)
+		{
+			_targetYieldSeason = targetSeason;
 		}
 
         public void Update()

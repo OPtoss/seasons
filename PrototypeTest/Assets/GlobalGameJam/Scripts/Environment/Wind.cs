@@ -21,6 +21,7 @@ namespace Seasons
 			if(IsPlayer(other))
 			{
 				SeasonsGame.instance.PlayerInstance.SetVelocityModifer(Vector2.zero);
+                SeasonsGame.instance.PlayerInstance.GetComponentInChildren<Animator>().SetTrigger("WindBlows");
 			}
 		}
 	}
