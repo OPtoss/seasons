@@ -7,7 +7,7 @@ namespace Seasons
 	{
 		public void OnTriggerEnter(Collider col) 
 		{
-			if(col.gameObject.layer == CollisionMaskUtils.S_PlayerLayer)
+			if(col.gameObject.layer == CollisionMaskUtils.PlayerLayer)
 			{
 				SeasonsGame._instance.Restart();
 			}

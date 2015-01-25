@@ -3,22 +3,24 @@ using System.Collections;
 
 namespace Seasons
 {
-	public class Wind : MonoBehaviour 
+	public class Wind : LevelObject 
 	{	
-		[SerializeField] private Vector2 _windForce; 
-		public void OnTriggerEnter(Collider col)
+		[SerializeField] private Vector2 _windForce = new Vector2(0.1f,0.2f); 
+		protected override void EnteredObject(GameObject other)
 		{
-			if(col.gameObject.layer == CollisionMaskUtils.S_PlayerLayer)
+			base.EnteredObject(other);
+			if(IsPlayer(other))
 			{
-				col.gameObject.GetComponent<PlayerObject>().SetVelocityModifer(_windForce);
+				SeasonsGame._instance.PlayerInstance.SetVelocityModifer(_windForce);
 			}
 		}
 
-		public void OnTriggerExit(Collider col)
+		protected override void LeftObject (GameObject other)
 		{
-			if(col.gameObject.layer == CollisionMaskUtils.S_PlayerLayer)
+			base.LeftObject (other);
+			if(IsPlayer(other))
 			{
-				col.gameObject.GetComponent<PlayerObject>().SetVelocityModifer(Vector2.zero);
+				SeasonsGame._instance.PlayerInstance.SetVelocityModifer(Vector2.zero);
 			}
 		}
 	}

@@ -13,11 +13,11 @@ namespace Seasons
 		private void OnEnable() 
 		{
 			//m_controller = GetComponent<CharacterController>();
-			gameObject.layer = CollisionMaskUtils.S_PlayerLayer;
-
+			gameObject.layer = CollisionMaskUtils.PlayerLayer;
+			Debug.Log(gameObject.layer);
 		}
 
-		public void Update() 
+		public void FixedUpdate() 
 		{
 			//m_controller.SimpleMove(((Vector3.right*MovementSpeed)+(Vector3.up*_windForce))*Time.
 			if(rigidbody.velocity.magnitude < MaxGroundSpeed)

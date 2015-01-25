@@ -15,6 +15,14 @@ namespace Seasons
 		private GameCameraManager _cameraManager;
 		private int _currentSeason = 0;
 
+		public PlayerObject PlayerInstance
+		{
+			get
+			{
+				return _player;
+			}
+		}
+
 		private void Awake() 
 		{
 			_instance = this;
