@@ -25,12 +25,12 @@ namespace Seasons
 			}
 		}
 		
-		public void RenderText(string text)
+		public void RenderText(string text, Color col)
 		{
 			_textLayout.text = text;
 			Tweener tween = DOTween.To(()=>_textLayout.color,
 			                           x => _textLayout.color = x,
-			                           new Color(1,1,1,1),0.5f);
+			                           new Color(col.r,col.g,col.b,1),0.5f);
 		}
 		
 		private void Update()
