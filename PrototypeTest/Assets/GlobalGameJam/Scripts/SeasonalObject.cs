@@ -69,8 +69,10 @@ namespace Seasons
 				{
 					continue;
 				}
+                Vector3 pos = this.transform.position;
+                pos.z = i*SeasonsGame.Z_DIST;
 				tempObject = GameObject.Instantiate(_seasonObjects[i],
-				                                    transform.position+Vector3.forward*(i*SeasonsGame.Z_DIST),
+				                                    pos,
 				                                    Quaternion.identity) as GameObject;
 				tempObject.transform.parent = transform;
 				_objectReferences.Add(tempObject);
