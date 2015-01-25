@@ -1,0 +1,263 @@
+fileFormatVersion: 2
+guid: fddba774f2e0b784b9fc5e20293fa44b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Axel
+    100002: BackWheelShell
+    100004: Base
+    100006: Body
+    100008: FrontWheel
+    100010: FrontWheel1
+    100012: FrontWheelShell
+    100014: pCube2
+    100016: pCube2 1
+    100018: pCylinder10
+    100020: pCylinder8
+    100022: pCylinder9
+    100024: //RootNode
+    100026: pPipe10
+    100028: pPipe11
+    100030: pPipe11 1
+    100032: pPipe12
+    100034: pPipe13
+    100036: pPipe5
+    100038: pPipe6
+    100040: pPipe7
+    100042: pPipe8
+    100044: pPipe9
+    100046: pSphere7
+    100048: RotatedPlayer
+    100050: pCylinder11
+    400000: Axel
+    400002: BackWheelShell
+    400004: Base
+    400006: Body
+    400008: FrontWheel
+    400010: FrontWheel1
+    400012: FrontWheelShell
+    400014: pCube2
+    400016: pCube2 1
+    400018: pCylinder10
+    400020: pCylinder8
+    400022: pCylinder9
+    400024: //RootNode
+    400026: pPipe10
+    400028: pPipe11
+    400030: pPipe11 1
+    400032: pPipe12
+    400034: pPipe13
+    400036: pPipe5
+    400038: pPipe6
+    400040: pPipe7
+    400042: pPipe8
+    400044: pPipe9
+    400046: pSphere7
+    400048: RotatedPlayer
+    400050: pCylinder11
+    2300000: Axel
+    2300002: BackWheelShell
+    2300004: Base
+    2300006: Body
+    2300008: FrontWheel
+    2300010: FrontWheel1
+    2300012: FrontWheelShell
+    2300014: pCube2
+    2300016: pCube2 1
+    2300018: pCylinder10
+    2300020: pCylinder8
+    2300022: pCylinder9
+    2300024: pPipe10
+    2300026: pPipe11
+    2300028: pPipe11 1
+    2300030: pPipe12
+    2300032: pPipe13
+    2300034: pPipe5
+    2300036: pPipe6
+    2300038: pPipe7
+    2300040: pPipe8
+    2300042: pPipe9
+    2300044: pSphere7
+    2300046: pCylinder11
+    3300000: Axel
+    3300002: BackWheelShell
+    3300004: Base
+    3300006: Body
+    3300008: FrontWheel
+    3300010: FrontWheel1
+    3300012: FrontWheelShell
+    3300014: pCube2
+    3300016: pCube2 1
+    3300018: pCylinder10
+    3300020: pCylinder8
+    3300022: pCylinder9
+    3300024: pPipe10
+    3300026: pPipe11
+    3300028: pPipe11 1
+    3300030: pPipe12
+    3300032: pPipe13
+    3300034: pPipe5
+    3300036: pPipe6
+    3300038: pPipe7
+    3300040: pPipe8
+    3300042: pPipe9
+    3300044: pSphere7
+    3300046: pCylinder11
+    4300000: Body
+    4300002: pPipe6
+    4300004: pPipe5
+    4300006: pSphere7
+    4300008: pPipe7
+    4300010: pPipe8
+    4300012: pCylinder8
+    4300014: pCylinder9
+    4300016: pPipe9
+    4300018: pPipe10
+    4300020: pPipe13
+    4300022: pPipe11
+    4300024: pCube2
+    4300026: pCylinder10
+    4300028: pPipe12
+    4300030: pPipe11
+    4300032: pCube2
+    4300034: Base
+    4300036: Axel
+    4300038: FrontWheel
+    4300040: FrontWheel1
+    4300042: FrontWheelShell
+    4300044: BackWheelShell
+    4300046: pCylinder11
+    7400000: idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: RotatedPlayer
+        weight: 1
+      - path: RotatedPlayer/Base
+        weight: 1
+      - path: RotatedPlayer/Base/Axel
+        weight: 1
+      - path: RotatedPlayer/Base/Axel/FrontWheel
+        weight: 1
+      - path: RotatedPlayer/Base/Axel/FrontWheel1
+        weight: 1
+      - path: RotatedPlayer/Base/BackWheelShell
+        weight: 1
+      - path: RotatedPlayer/Base/FrontWheelShell
+        weight: 1
+      - path: RotatedPlayer/Body
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe6
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe6/pPipe5
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe6/pPipe5/pSphere7
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe7
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe7/pPipe8
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe7/pPipe8/pCylinder8
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe7/pPipe8/pCylinder8/pCylinder9
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe9
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe10
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe12
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe12/pPipe11
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe12/pPipe11/pCube2
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe13
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe13/pCylinder10
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe13/pCylinder11
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe13/pPipe11 1
+        weight: 1
+      - path: RotatedPlayer/Body/pPipe13/pPipe11 1/pCube2 1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

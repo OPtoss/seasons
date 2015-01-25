@@ -25,6 +25,41 @@ ModelImporter:
     100038: pSphere4
     100040: pSphere5
     100042: Tree
+    100044: DeadTree
+    100046: pCylinder2 1
+    100048: pCylinder3 1
+    100050: pCylinder4 1
+    100052: pCylinder5 1
+    100054: Axel
+    100056: back
+    100058: BackWheel
+    100060: BackWheelShell
+    100062: Base
+    100064: Body
+    100066: front3
+    100068: FrontWheel
+    100070: FrontWheelShell
+    100072: left
+    100074: pCube2
+    100076: pCube2 1
+    100078: pCylinder10
+    100080: pCylinder8
+    100082: pCylinder9
+    100084: Player
+    100086: pPipe10
+    100088: pPipe11
+    100090: pPipe11 1
+    100092: pPipe12
+    100094: pPipe13
+    100096: pPipe5
+    100098: pPipe6
+    100100: pPipe7
+    100102: pPipe8
+    100104: pPipe9
+    100106: pSphere7
+    100108: FrontWheel1
+    100110: RotatedPlayer
+    100112: pCylinder11
     400000: curve1
     400002: curve2
     400004: curve3
@@ -47,6 +82,41 @@ ModelImporter:
     400038: pSphere4
     400040: pSphere5
     400042: Tree
+    400044: DeadTree
+    400046: pCylinder2 1
+    400048: pCylinder3 1
+    400050: pCylinder4 1
+    400052: pCylinder5 1
+    400054: Axel
+    400056: back
+    400058: BackWheel
+    400060: BackWheelShell
+    400062: Base
+    400064: Body
+    400066: front3
+    400068: FrontWheel
+    400070: FrontWheelShell
+    400072: left
+    400074: pCube2
+    400076: pCube2 1
+    400078: pCylinder10
+    400080: pCylinder8
+    400082: pCylinder9
+    400084: Player
+    400086: pPipe10
+    400088: pPipe11
+    400090: pPipe11 1
+    400092: pPipe12
+    400094: pPipe13
+    400096: pPipe5
+    400098: pPipe6
+    400100: pPipe7
+    400102: pPipe8
+    400104: pPipe9
+    400106: pSphere7
+    400108: FrontWheel1
+    400110: RotatedPlayer
+    400112: pCylinder11
     2300000: loftedSurface1
     2300002: pCube1
     2300004: pCylinder2
@@ -59,6 +129,36 @@ ModelImporter:
     2300018: pSphere4
     2300020: pSphere5
     2300022: Tree
+    2300024: DeadTree
+    2300026: pCylinder2 1
+    2300028: pCylinder3 1
+    2300030: pCylinder4 1
+    2300032: pCylinder5 1
+    2300034: Axel
+    2300036: BackWheel
+    2300038: BackWheelShell
+    2300040: Base
+    2300042: Body
+    2300044: FrontWheel
+    2300046: FrontWheelShell
+    2300048: pCube2
+    2300050: pCube2 1
+    2300052: pCylinder10
+    2300054: pCylinder8
+    2300056: pCylinder9
+    2300058: pPipe10
+    2300060: pPipe11
+    2300062: pPipe11 1
+    2300064: pPipe12
+    2300066: pPipe13
+    2300068: pPipe5
+    2300070: pPipe6
+    2300072: pPipe7
+    2300074: pPipe8
+    2300076: pPipe9
+    2300078: pSphere7
+    2300080: FrontWheel1
+    2300082: pCylinder11
     3300000: loftedSurface1
     3300002: pCube1
     3300004: pCylinder2
@@ -71,6 +171,36 @@ ModelImporter:
     3300018: pSphere4
     3300020: pSphere5
     3300022: Tree
+    3300024: DeadTree
+    3300026: pCylinder2 1
+    3300028: pCylinder3 1
+    3300030: pCylinder4 1
+    3300032: pCylinder5 1
+    3300034: Axel
+    3300036: BackWheel
+    3300038: BackWheelShell
+    3300040: Base
+    3300042: Body
+    3300044: FrontWheel
+    3300046: FrontWheelShell
+    3300048: pCube2
+    3300050: pCube2 1
+    3300052: pCylinder10
+    3300054: pCylinder8
+    3300056: pCylinder9
+    3300058: pPipe10
+    3300060: pPipe11
+    3300062: pPipe11 1
+    3300064: pPipe12
+    3300066: pPipe13
+    3300068: pPipe5
+    3300070: pPipe6
+    3300072: pPipe7
+    3300074: pPipe8
+    3300076: pPipe9
+    3300078: pSphere7
+    3300080: FrontWheel1
+    3300082: pCylinder11
     4300000: loftedSurface1
     4300002: pCube1
     4300004: Tree
@@ -83,6 +213,37 @@ ModelImporter:
     4300018: pSphere2
     4300020: pSphere1
     4300022: pSphere4
+    4300024: DeadTree
+    4300026: pCylinder5
+    4300028: pCylinder4
+    4300030: pCylinder2
+    4300032: pCylinder3
+    4300034: Body
+    4300036: pPipe6
+    4300038: pPipe5
+    4300040: pSphere7
+    4300042: pPipe7
+    4300044: pPipe8
+    4300046: pCylinder8
+    4300048: pCylinder9
+    4300050: pPipe9
+    4300052: pPipe10
+    4300054: pPipe13
+    4300056: pPipe11
+    4300058: pCube2
+    4300060: pCylinder10
+    4300062: pPipe12
+    4300064: pPipe11
+    4300066: pCube2
+    4300068: Base
+    4300070: Axel
+    4300072: BackWheel
+    4300074: FrontWheel
+    4300076: FrontWheelShell
+    4300078: BackWheelShell
+    4300080: FrontWheel1
+    4300082: pCylinder11
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
