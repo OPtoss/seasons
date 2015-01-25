@@ -11,7 +11,7 @@ namespace Seasons
 			base.EnteredObject(other);
 			if(IsPlayer(other))
 			{
-				SeasonsGame._instance.PlayerInstance.SetVelocityModifer(_windForce);
+				SeasonsGame.instance.PlayerInstance.SetVelocityModifer(_windForce);
 			}
 		}
 
@@ -20,7 +20,7 @@ namespace Seasons
 			base.LeftObject (other);
 			if(IsPlayer(other))
 			{
-				SeasonsGame._instance.PlayerInstance.SetVelocityModifer(Vector2.zero);
+				SeasonsGame.instance.PlayerInstance.SetVelocityModifer(Vector2.zero);
 			}
 		}
 	}

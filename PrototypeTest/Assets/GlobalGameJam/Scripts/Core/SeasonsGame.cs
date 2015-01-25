@@ -7,7 +7,7 @@ namespace Seasons
 	public class SeasonsGame : MonoBehaviour 
 	{
 		public static float Z_DIST = 50f;
-		public static SeasonsGame _instance;
+		public static SeasonsGame instance;
 
 		[SerializeField] private Transform _spawnPoint;
 
@@ -27,7 +27,7 @@ namespace Seasons
 
 		private void Awake() 
 		{
-			_instance = this;
+			instance = this;
 			_player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObject>();
 			_cameraManager = GameObject.FindGameObjectWithTag("CameraManager").GetComponent<GameCameraManager>();
 			DG.Tweening.DOTween.Init();

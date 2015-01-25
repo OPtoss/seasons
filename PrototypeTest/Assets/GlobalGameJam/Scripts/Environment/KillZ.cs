@@ -9,7 +9,7 @@ namespace Seasons
 		{
 			if(col.gameObject.layer == CollisionMaskUtils.PlayerLayer)
 			{
-				SeasonsGame._instance.Restart();
+				SeasonsGame.instance.Restart();
 			}
 		}
 	}

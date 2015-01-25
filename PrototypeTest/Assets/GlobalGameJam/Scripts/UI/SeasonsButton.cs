@@ -9,7 +9,7 @@ namespace Seasons
 		#region IPointerClickHandler implementation
 		public void OnPointerClick (PointerEventData eventData)
 		{
-			SeasonsGame._instance.ChangeSeasons();
+			SeasonsGame.instance.ChangeSeasons();
 		}
 		#endregion
 	}

@@ -57,6 +57,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\Wind.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\FollowX.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Obstacles\SnowmanObstacle.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\SeasonalObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\UI\SeasonsButton.cs" />
