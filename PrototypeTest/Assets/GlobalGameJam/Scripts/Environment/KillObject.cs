@@ -9,14 +9,14 @@ namespace Seasons
 		{
 			if(IsPlayer(targetObject))
 			{
-				SeasonsGame.instance.Restart();
+				SeasonsGame.instance.Die();
 			}
 		}
 		protected override void TouchedObject (GameObject targetObject)
 		{
 			if(IsPlayer(targetObject))
 			{
-				SeasonsGame.instance.Restart();
+				SeasonsGame.instance.Die();
 			}
 		}
 	}

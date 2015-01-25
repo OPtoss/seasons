@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System; 
 
@@ -13,12 +13,15 @@ namespace Seasons
 
 		private PlayerObject _player;
 		private GameCameraManager _cameraManager;
+		private FadeController _fadeController;
+
         [SerializeField]
         private int _startSeason = 2;
 		private int _currentSeason = 0;
 
         private bool _isTapDown = false;
 		private int _targetYieldSeason = -1;
+		private bool _gameComplete = false;
 
 		public PlayerObject PlayerInstance
 		{
@@ -48,6 +51,7 @@ namespace Seasons
 			instance = this;
 			_player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObject>();
 			_cameraManager = GameObject.FindGameObjectWithTag("CameraManager").GetComponent<GameCameraManager>();
+			_fadeController = GameObject.FindGameObjectWithTag ("FadeController").GetComponent<FadeController>();
 			DG.Tweening.DOTween.Init();
 		}
 
@@ -61,10 +65,16 @@ namespace Seasons
 		public void Restart()
 		{
 			_player.transform.position = _spawnPoint.position;
-
+			_targetYieldSeason = -1;
+			_gameComplete = false;
             _currentSeason = _startSeason;
             _cameraManager.ChangeCamera(_currentSeason);
             _player.UpdatePlayerDepth(_currentSeason);
+		}
+
+		public void Die ()
+		{
+			_fadeController.FadeBlack(Restart);
 		}
 
 		public void ChangeSeasons()
@@ -87,9 +97,24 @@ namespace Seasons
 			_player.UpdatePlayerDepth(_currentSeason);
 		}
 
+		public void FreezePlayer()
+		{
+			_targetYieldSeason = -2;
+		}
+
 		public void YieldSeason(int targetSeason)
 		{
 			_targetYieldSeason = targetSeason;
+		}
+
+		public void GameComplete (System.Action action)
+		{
+			if(_fadeController != null)
+			{
+				_fadeController.FadeUIIn(action);
+			}
+
+			_gameComplete = true;
 		}
 
         public void Update()
@@ -99,8 +124,22 @@ namespace Seasons
                 if (!_isTapDown)
                 {
                     _isTapDown = true;
-
-                    ChangeSeasons();
+					if(!_gameComplete)
+					{
+						ChangeSeasons();
+					}
+					else if(_fadeController == null && _gameComplete)
+					{
+						Restart();
+					}
+					else if(_gameComplete)
+					{
+						if(_fadeController.CanRestart())
+						{
+							Restart();
+							_fadeController.FadeUIOut();
+						}
+					}
                 }
             }
             else

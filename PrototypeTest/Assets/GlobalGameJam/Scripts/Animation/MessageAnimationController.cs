@@ -15,6 +15,5 @@ namespace Seasons
 		{
 			_animator.SetTrigger("MessageReceived");
 		}
-
 	}
 }
