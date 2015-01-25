@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -73,28 +73,28 @@
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
+ <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/DOTween.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/DOTween43.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/DOTween46.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/DOTween46.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="ShaderForge">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/ShaderForge/Editor/ShaderForge.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/ShaderForge/Editor/ShaderForge.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

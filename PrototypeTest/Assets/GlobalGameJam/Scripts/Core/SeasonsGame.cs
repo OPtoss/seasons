@@ -6,25 +6,26 @@ namespace Seasons
 {
 	public class SeasonsGame : MonoBehaviour 
 	{
-        public static event Action OnRestart;
-
+		public static event Action OnRestart;
+		
 		public static float Z_DIST = 50f;
 		public static SeasonsGame instance;
-
+		
 		[SerializeField] private Transform _spawnPoint;
-
+		
 		private PlayerObject _player;
 		private GameCameraManager _cameraManager;
 		private FadeController _fadeController;
-
-        [SerializeField]
-        private int _startSeason = 2;
+		
+		[SerializeField]
+		private int _startSeason = 2;
 		private int _currentSeason = 0;
-
-        private bool _isTapDown = false;
+		
+		private bool _isTapDown = false;
 		private int _targetYieldSeason = -1;
 		private bool _gameComplete = false;
-
+		private bool _blockInput = false;
+		
 		public PlayerObject PlayerInstance
 		{
 			get
@@ -32,14 +33,14 @@ namespace Seasons
 				return _player;
 			}
 		}
-
+		
 		public int CurrentSeason {
 			get
 			{
 				return _currentSeason;
 			}
 		}
-
+		
 		public bool IsWaitingForUser
 		{
 			get
@@ -47,7 +48,7 @@ namespace Seasons
 				return _targetYieldSeason != -1;
 			}
 		}
-
+		
 		private void Awake() 
 		{
 			instance = this;
@@ -56,36 +57,53 @@ namespace Seasons
 			_fadeController = GameObject.FindGameObjectWithTag ("FadeController").GetComponent<FadeController>();
 			DG.Tweening.DOTween.Init();
 		}
-
+		
 		private void Start()
 		{
-            _player.transform.position = _spawnPoint.position;
+			_player.transform.position = _spawnPoint.position;
 
 			_fadeController.FadeFromWhite();
-            _currentSeason = _startSeason;
+			_currentSeason = _startSeason;
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
-
+			
 		}
-
+		
+		public void BlockInput(bool isBlocking)
+		{
+			_blockInput = isBlocking;
+		}
+		
 		public void Restart()
 		{
-            if (OnRestart != null)
-                OnRestart();
-
+			if (OnRestart != null)
+				OnRestart();
+			_blockInput = false;
 			_player.transform.position = _spawnPoint.position;
 			_targetYieldSeason = -1;
 			_gameComplete = false;
-            _currentSeason = _startSeason;
-            _cameraManager.ChangeCamera(_currentSeason);
-            _player.UpdatePlayerDepth(_currentSeason);
+			_currentSeason = _startSeason;
+			_cameraManager.ChangeCamera(_currentSeason);
+			_player.UpdatePlayerDepth(_currentSeason);
 		}
-
+		
 		public void Die ()
 		{
 			_fadeController.FadeBlack(Restart);
 		}
-
+		
+		public void ChangeSeasons(int season)
+		{
+			//Release yield.
+			if(_currentSeason == _targetYieldSeason)
+			{
+				_targetYieldSeason = -1;	
+			}
+			_currentSeason = season;
+			_cameraManager.ChangeCamera(_currentSeason);
+			_player.UpdatePlayerDepth(_currentSeason);
+		}
+		
 		public void ChangeSeasons()
 		{
 			if(_currentSeason == 3) 
@@ -96,7 +114,7 @@ namespace Seasons
 			{
 				_currentSeason++;
 			}
-
+			
 			//Release yield.
 			if(_currentSeason == _targetYieldSeason)
 			{
@@ -105,35 +123,35 @@ namespace Seasons
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
 		}
-
+		
 		public void FreezePlayer()
 		{
 			_targetYieldSeason = -2;
 		}
-
+		
 		public void YieldSeason(int targetSeason)
 		{
 			_targetYieldSeason = targetSeason;
 		}
-
+		
 		public void GameComplete (System.Action action)
 		{
 			if(_fadeController != null)
 			{
 				_fadeController.FadeUIIn(action);
 			}
-
+			
 			_gameComplete = true;
 		}
-
-        public void Update()
-        {
-            if (Input.GetAxis("Tap") > 0)
-            {
-                if (!_isTapDown)
-                {
-                    _isTapDown = true;
-					if(!_gameComplete)
+		
+		public void Update()
+		{
+			if (Input.GetAxis("Tap") > 0)
+			{
+				if (!_isTapDown)
+				{
+					_isTapDown = true;
+					if(!_gameComplete && !_blockInput)
 					{
 						ChangeSeasons();
 					}
@@ -149,12 +167,12 @@ namespace Seasons
 							_fadeController.FadeUIOut();
 						}
 					}
-                }
-            }
-            else
-            {
-                _isTapDown = false;
-            }
-        }
+				}
+			}
+			else
+			{
+				_isTapDown = false;
+			}
+		}
 	}
 }
