@@ -56,6 +56,7 @@
      <None Include="Assets\GlobalGameJam\Shader\AlphaPostEffect.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Cubemaps.shader" />
+     <None Include="Assets\GlobalGameJam\Shader\WaterVolume.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\Parallax.shader" />
      <None Include="Assets\GlobalGameJam\PanningTexture.shader" />
