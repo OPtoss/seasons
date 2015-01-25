@@ -30,6 +30,7 @@ namespace Seasons
 			_instance = this;
 			_player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerObject>();
 			_cameraManager = GameObject.FindGameObjectWithTag("CameraManager").GetComponent<GameCameraManager>();
+			DG.Tweening.DOTween.Init();
 		}
 
 		public void Restart()
