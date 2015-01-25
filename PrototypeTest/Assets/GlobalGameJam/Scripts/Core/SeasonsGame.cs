@@ -13,6 +13,8 @@ namespace Seasons
 
 		private PlayerObject _player;
 		private GameCameraManager _cameraManager;
+        [SerializeField]
+        private int _startSeason = 2;
 		private int _currentSeason = 0;
 
         private bool _isTapDown = false;
@@ -35,7 +37,7 @@ namespace Seasons
 
 		private void Start()
 		{
-			_currentSeason = 2;
+            _currentSeason = _startSeason;
 			_cameraManager.ChangeCamera(_currentSeason);
 			_player.UpdatePlayerDepth(_currentSeason);
 		}
@@ -43,6 +45,10 @@ namespace Seasons
 		public void Restart()
 		{
 			_player.transform.position = _spawnPoint.position;
+
+            _currentSeason = _startSeason;
+            _cameraManager.ChangeCamera(_currentSeason);
+            _player.UpdatePlayerDepth(_currentSeason);
 		}
 
 		public void ChangeSeasons()
