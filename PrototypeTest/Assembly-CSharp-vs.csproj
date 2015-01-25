@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>E:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +59,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\KillZ.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\LevelObject.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\SeasonSwitcher.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\Wind.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\YieldVolume.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\FollowX.cs" />
@@ -95,16 +96,16 @@
      <None Include="Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
      <None Include="Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/DOTween.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTween43">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/DOTween43.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>M:/Projects/Games/seasons/PrototypeTest/Assets/DOTween/DOTween46.dll</HintPath>
+ <HintPath>E:/Unity Projects/Seasons/PrototypeTest/Assets/DOTween/DOTween46.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
