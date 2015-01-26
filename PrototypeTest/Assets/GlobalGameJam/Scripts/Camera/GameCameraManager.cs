@@ -16,6 +16,7 @@ namespace Seasons
 
         public int _prevCameraIndex = 0;
         public int _cameraIndex = 0;
+        public float yOffset;
 
         //[SerializeField] private RenderTexture _intermediateRT;
 
@@ -27,11 +28,12 @@ namespace Seasons
 			Camera cam;
 			for(int i = 0; i < 4; i++)
 			{
-				tempObject = (GameObject)Instantiate(_templateCamera, Vector3.zero, Quaternion.identity );
+				tempObject = (GameObject)Instantiate(_templateCamera );
 				cam = tempObject.GetComponent<Camera>();
                 cam.enabled = false;
 				_seasonCameras.Add(cam);
 				tempObject.transform.parent = transform;
+                tempObject.transform.position = Vector3.zero;
                 tempObject.transform.position += Vector3.forward * (SeasonsGame.Z_DIST * i - SeasonsGame.Z_DIST/2f);
 			}
 
@@ -105,7 +107,7 @@ namespace Seasons
 		private void Update () 
 		{
 
-            Vector3 targetPos = new Vector3(_target.position.x, _target.position.y, 0);
+            Vector3 targetPos = new Vector3(_target.position.x, _target.position.y + yOffset, 0);
 			transform.localPosition = targetPos + (Vector3.right*_followDistance);
 		}
 	}

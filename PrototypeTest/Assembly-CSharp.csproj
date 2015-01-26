@@ -51,6 +51,7 @@
      <Compile Include="Assets\GlobalGameJam\Scripts\Camera\GameCameraManager.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\PlayerObject.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Core\SeasonsGame.cs" />
+     <Compile Include="Assets\GlobalGameJam\Scripts\Environment\Checkpoint.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\CollisionMaskUtils.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\DialogueVolume.cs" />
      <Compile Include="Assets\GlobalGameJam\Scripts\Environment\DisableSeasonalObject.cs" />
