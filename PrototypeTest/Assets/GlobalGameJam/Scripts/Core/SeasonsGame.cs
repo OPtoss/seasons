@@ -135,7 +135,7 @@ namespace Seasons
 		
 		public void FreezePlayer()
 		{
-			_targetYieldSeason = -2;
+			//_targetYieldSeason = -2;
 			PlayerInstance.Kill(); 
 		}
 		

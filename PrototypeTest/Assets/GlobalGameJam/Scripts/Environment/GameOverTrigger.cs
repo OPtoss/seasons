@@ -18,11 +18,11 @@ namespace Seasons
 			Tweener tween = DOTween.To(()=>_snow.emissionRate, 
 			                           x=>_snow.emissionRate = x,
 			                           100,
-			                           3.7f);
+                                       4.5f);
 			DOTween.To(()=>_snow.startSize, 
 			           x=>_snow.startSize = x,
 			           100,
-			           3.7f);
+			           4.5f);
 			tween.OnComplete(()=>SeasonsGame.instance.GameComplete(Cleanup));
 			SeasonsGame.instance.FreezePlayer();
 		}
